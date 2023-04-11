@@ -73,13 +73,13 @@ public class HelloController {
   - PrintWriter는 BufferedWriter와 OutputStreamWriter의 기능을 모두 수행하는 클래스로 쉽게 버퍼에 쓸 수 있다.
   - 반대로 버퍼를 읽기 위해서 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader("내용"));를 이용한다.
 
-- # HttpServletRequest ![img.png](img.png)
+- ## HttpServletRequest ![img.png](img.png)
   - 아파치 웹서버를 통해 클라이언트의 필터링을 통과한 요청 중 정적 자원의 경우, 자원을 응답한다.
   - 아파치 웹서버를 통해 클라이언트의 필터링을 통과한 요청 중 동적 자원의 경우, 톰캣이 처리한다.
     - 톰캣이 문자열을 파싱해 객체로 매핑하고, 서블릿이 톰캣이 매핑한 객체를 사용한다. (HttpServletRequest) 
     - 톰캣이 처리하는 동적 자원 요청 : JSP, Servlet, EL, RESTful, JSTL
     - 하나의 서블릿 호출 당 하나의 스레드를 생성한다.
-- HttpServletResponse ![img_1.png](img_1.png)
+- ## HttpServletResponse ![img_1.png](img_1.png)
   - 상태 코드와 setter를 이용해 작성한 응답 데이터 (헤더, 바디)로 이루어져 있다.
   - 요청의 경우 본문이 POST, PUT 요청일 때만 존재하지만, 응답의 경우 모두 본문이 존재한다.
   - 세션 기반 인증 방식 : 세션을 이용해 클라이언트의 상태를 서버의 세션 저장소에 저장해 이전에 요청한 적이 있는 클라이언트인지 인지할 수 있다.
